@@ -89,3 +89,49 @@ npm install vue-router@4
 ```
 Ps: we need version 4 for vue3
 
+[see commit changes](https://github.com/aymaneMx/first-vite-project/commit/30b2bc68daec971a14a3274bdb009d2f49d7f8ca)  
+
+- create `src/router/index.js` file with the following code where we will create the router, initiate it with a component called `Home` linked to the path `/` (yes, we will create the component in the coming steps):
+```js
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '/src/components/Home.vue'
+
+const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: Home,
+    },
+]
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+})
+
+export default router
+```
+- in `App.vue` replace the `helloworld` component to `<router-view/>`.
+- Create a home component eg:
+```html
+<template>
+  <h1>Home!!</h1>
+</template>
+```
+- import the router in `main.js` and use it before the app mounted!
+```js
+import router from "./router/index"
+createApp(App).use(router).mount('#app')
+```
+
+### Install Vuex
+
+[What is Vuex?](https://vuex.vuejs.org/)
+
+It's basically a state management library, that you probably won't need it if you're building a simple app.
+
+```shell
+$ npm install vuex@next --save
+```
+
+see [doc](https://vuex.vuejs.org/guide/#the-simplest-store) for more.
