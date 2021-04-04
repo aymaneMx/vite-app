@@ -1,4 +1,4 @@
-## Getting started with Vue 3 + Vite
+## Set up a Vue.js app running on Vite
 
 ### set up Vite
 
