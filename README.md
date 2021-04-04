@@ -77,3 +77,15 @@ module.exports = {
     arrowParens: 'always',
 }
 ```
+
+### Install Vue Router
+
+- For what! why we need Vue Router?
+- Vue Router is the official router for Vue.js. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze.
+[see](https://router.vuejs.org/) for more...
+
+```shell
+npm install vue-router@4
+```
+Ps: we need version 4 for vue3
+
